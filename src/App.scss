@@ -1,0 +1,135 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+    margin: 20px 0;
+  }
+
+  .app-title {
+    font-size: 36px;
+  }
+
+  .add-cpf-form, .search-cpf-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+    
+    .add-button, .search-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    }
+  }
+
+  .error {
+    color: red;
+  }
+
+  .cpf-list {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+
+    .cpf-item {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 200px;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      background-color: lightgray;
+      border-radius: 5px;
+      cursor : pointer;
+
+      .delete-button {
+        position: absolute;
+        right: 10px;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .add-cpf-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+    
+    .add-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    }
+  }
+
+  .cpf-popup {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-inner {
+      z-index: 11;
+      width: 400px;
+      height: 300px;
+      background-color: white;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .cpf-popup-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .cpf-popup-cpf, .cpf-popup-created-at {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .cpf-popup-close {
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+  }
+}
